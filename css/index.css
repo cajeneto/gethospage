@@ -1,3 +1,252 @@
+:root {
+    --azul-escuro: #032179;
+    --azul-claro: #5ce1e6;
+    --azul-medio: #96a4c8;
+    --azul-profundo: #022179;
+    --azul-intenso: #072a7e;
+    --texto-branco: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--texto-branco);
+    background-color: var(--azul-escuro);
+    line-height: 1.6;
+  }
+  
+  .hero {
+    background-color: var(--azul-intenso);
+    text-align: center;
+    padding: 20px 40px;
+    
+  }
+  
+.logo_empresa_gethos {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    /* background-color: #cd0db0; */
+    margin-top: -5rem;
+    margin-left: -2rem;
+}
+
+.logo_gethos {
+    height: 15rem;
+    margin-left: -3rem;
+    /* background-color: #5dcd0d; */
+
+}
+
+.h1_title_gethos {
+    display: flex;
+    font-size: 1.5rem;
+    margin-left: -3rem
+    /* background-color: #cd0db0; */
+
+}
+a {
+
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+  .h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero button {
+    background-color: var(--azul-claro);
+    color: var(--azul-profundo);
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--azul-profundo);
+  }
+  
+  .alt-bg {
+    background-color: var(--azul-medio);
+    color: #000;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+  
+  blockquote {
+    font-style: italic;
+    margin: 20px 0;
+  }
+  
+  cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    gap: 15px;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  form button {
+    background-color: var(--azul-claro);
+    color: var(--azul-profundo);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #mensagem-enviada {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+
+
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+    
+.div1 {
+    grid-column: span 3 / span 3;
+}
+
+.div3 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 5 / span 5;
+    grid-column-start: 4;
+    grid-row-start: 1;
+    /* background-color: aqua; */
+}
+
+.div5 {
+    grid-column: span 3 / span 3;
+    grid-row-start: 5;
+}
+
+
+
+
+.parent_sessao1 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+    
+.div1_sessao1 {
+    grid-column: span 5 / span 5;
+}
+
+.div2_sessao1 {
+    grid-column: span 5 / span 5;
+    grid-row-start: 2;
+}
+
+.div3_sessao1 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-row-start: 3;
+}
+
+.div4_sessao1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 4;
+    grid-row-start: 3;
+}
+
+
+
+
+
+.parent_sessao2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+    
+.div1_sessao2 {
+    display: flex;
+    grid-column: span 5 / span 1;
+    height: 3rem;
+    background-color: #cd0db0;
+    align-items: center;
+    justify-content: center;
+}
+
+.div2_sessao2 {
+    grid-column: span 5 / span 5;
+    grid-row-start: 2;
+}
+
+.div3_sessao2 {
+    grid-column: span 5 / span 5;
+    grid-row-start: 3;
+}
+
+.div4_sessao2 {
+    grid-column: span 5 / span 5;
+    grid-row: span 2 / span 2;
+    grid-row-start: 4;
+}
+      
+
+
+
 /* Responsividade para tablets e celulares */
 @media (max-width: 1024px) {
     .parent,
