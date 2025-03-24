@@ -1,3 +1,5 @@
+
+
 :root {
     --azul-escuro: #032179;
     --azul-claro: #5ce1e6;
@@ -28,32 +30,45 @@
   }
   
 .logo_empresa_gethos {
+
     display: flex;
     align-items: center;
-    justify-content: start;
+    width: 100%;
+    height: 5rem;
     /* background-color: #cd0db0; */
-    margin-top: -5rem;
-    margin-left: -2rem;
+    overflow: hidden;
+
 }
 
 .logo_gethos {
-    height: 15rem;
-    margin-left: -3rem;
-    /* background-color: #5dcd0d; */
+  /* display: flex; */
+  clip-path: inset(29% 30% 30% 30%);
+  /* background-color: #5dcd0d; */
+  object-fit: cover; /* Corta a imagem para preencher o contêiner */
+  object-position: center; /* Foca no centro da imagem */
+  margin-left: -12rem
 
 }
 
 .h1_title_gethos {
     display: flex;
     font-size: 1.5rem;
-    margin-left: -3rem
+    margin-left: -12rem
     /* background-color: #cd0db0; */
 
 }
 a {
-
     text-decoration: none;
     color: #ffffff;
+
+}
+
+.highlight {
+  background-color: #00a18f; /* Branco com 30% de opacidade */
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: #ffffff;
+  box-shadow: 1px 1px 10px 1px #01685c ;
 }
 
 
@@ -223,7 +238,7 @@ a {
     display: flex;
     grid-column: span 5 / span 1;
     height: 3rem;
-    background-color: #cd0db0;
+    /* background-color: #cd0db0; */
     align-items: center;
     justify-content: center;
 }
@@ -249,65 +264,118 @@ a {
 
 /* Responsividade para tablets e celulares */
 @media (max-width: 1024px) {
-    .parent,
-    .parent_sessao1,
-    .parent_sessao2 {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-    }
-  
-    .div1,
-    .div3,
-    .div4,
-    .div5,
-    .div1_sessao1,
-    .div2_sessao1,
-    .div3_sessao1,
-    .div4_sessao1,
-    .div1_sessao2,
-    .div2_sessao2,
-    .div3_sessao2,
-    .div4_sessao2 {
-      grid-column: span 1;
-      grid-row: auto;
-    }
-  
-    .logo_empresa_gethos {
-      flex-direction: column;
-      align-items: center;
-      margin: 0;
-    }
-  
-    .logo_gethos {
-      height: 8rem;
-      margin: 0 auto;
-    }
-  
-    .h1_title_gethos {
-      font-size: 1.2rem;
-      text-align: center;
-      margin: 0.5rem 0;
-    }
-  
-    .hero {
-      padding: 40px 20px;
-    }
-  
-    .hero button {
-      width: 100%;
-    }
-  
-    .section {
-      padding: 40px 20px;
-    }
-  
-    form {
-      width: 100%;
-      padding: 0 20px;
-    }
-  
-    form input {
-      width: 100%;
-    }
+  .parent,
+  .parent_sessao1,
+  .parent_sessao2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
+
+  .div1,
+  .div3,
+  .div4,
+  .div5,
+  .div1_sessao1,
+  .div2_sessao1,
+  .div3_sessao1,
+  .div4_sessao1,
+  .div1_sessao2,
+  .div2_sessao2,
+  .div3_sessao2,
+  .div4_sessao2 {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+
+  .logo_empresa_gethos {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  .logo_gethos {
+    height: 5rem;
+    /* margin: 10px auto; */
+    max-width: 100%;
+    object-fit: cover;
+    /* background-color: #cd0db0; */
+    object-position: center;
+    clip-path: inset(29% 30% 30% 30%);
+    margin-left: -12rem
+  }
+
+  .h1_title_gethos {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    margin-left: -12rem
+  }
+
+  .hero {
+    padding: 40px 20px;
+    
+  }
+
+  .hero button {
+    width: 100%;
+  }
+
+  .section {
+    padding: 40px 20px;
+    
+  }
+
+  form {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  form input {
+    width: 100%;
+  }
+
+  /* 🔹 Imagens dentro das divs principais */
+  .div4 img,
+  .div3_sessao1 img,
+  .div4_sessao1 img,
+  .div3 img,
+  .div4 img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 1px -1px 1000px 1px #04d4bc;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+
+  }
+
   
+
+  /* 🔹 Títulos e parágrafos ajustados */
+  h1, h2 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+
+  /* 🔹 Botões responsivos */
+  .hero button,
+  form button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
