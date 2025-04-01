@@ -1,381 +1,303 @@
-
-
 :root {
-    --azul-escuro: #032179;
-    --azul-claro: #5ce1e6;
-    --azul-medio: #96a4c8;
-    --azul-profundo: #022179;
-    --azul-intenso: #072a7e;
-    --texto-branco: #ffffff;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    color: var(--texto-branco);
-    background-color: var(--azul-escuro);
-    line-height: 1.6;
-  }
-  
-  .hero {
-    background-color: var(--azul-intenso);
-    text-align: center;
-    padding: 20px 40px;
-    
-  }
-  
+  --azul-escuro: #032179;
+  --azul-claro: #5ce1e6;
+  --azul-medio: #96a4c8;
+  --azul-profundo: #022179;
+  --azul-intenso: #072a7e;
+  --texto-branco: #ffffff;
+  --cinza-suave: #f4f6f8; /* Novo: para fundos alternativos */
+  --sombra: 0 4px 15px rgba(0, 0, 0, 0.2); /* Novo: sombra suave */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif; /* Adicionado Roboto como fallback */
+  color: var(--texto-branco);
+  background-color: var(--azul-escuro);
+  line-height: 1.6;
+  font-size: 16px; /* Base para melhor legibilidade */
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--azul-intenso), var(--azul-profundo)); /* Gradiente */
+  text-align: center;
+  padding: 40px 20px; /* Aumentado para mais espaço */
+  position: relative;
+  overflow: hidden;
+}
+
 .logo_empresa_gethos {
-
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 5rem;
-    /* background-color: #cd0db0; */
-    overflow: hidden;
-
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza melhor */
+  height: 6rem; /* Aumentado para dar mais destaque */
+  gap: 1rem; /* Espaço entre logo e título */
 }
 
 .logo_gethos {
-  /* display: flex; */
-  clip-path: inset(29% 30% 30% 30%);
-  /* background-color: #5dcd0d; */
-  object-fit: cover; /* Corta a imagem para preencher o contêiner */
-  object-position: center; /* Foca no centro da imagem */
-  margin-left: -12rem
+  width: 80px; /* Tamanho fixo para consistência */
+  height: auto;
+  object-fit: contain;
+  clip-path: none; /* Removido clip-path para simplicidade */
+  transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
 
+.logo_gethos:hover {
+  transform: scale(1.1); /* Efeito de zoom suave */
 }
 
 .h1_title_gethos {
-    display: flex;
-    font-size: 1.5rem;
-    margin-left: -12rem
-    /* background-color: #cd0db0; */
-
+  font-size: 2rem; /* Aumentado para impacto */
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase; /* Mais profissional */
+  letter-spacing: 1px;
 }
-a {
-    text-decoration: none;
-    color: #ffffff;
 
+a {
+  text-decoration: none;
+  color: var(--texto-branco);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--azul-claro); /* Destaque ao passar o mouse */
 }
 
 .highlight {
-  background-color: #00a18f; /* Branco com 30% de opacidade */
-  padding: 2px 5px;
-  border-radius: 3px;
-  color: #ffffff;
-  box-shadow: 1px 1px 10px 1px #01685c ;
+  background-color: #00a18f;
+  padding: 4px 8px;
+  border-radius: 5px;
+  color: var(--texto-branco);
+  font-weight: 600;
+  box-shadow: var(--sombra); /* Sombra mais definida */
 }
 
-
-  .h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero button {
-    background-color: var(--azul-claro);
-    color: var(--azul-profundo);
-    border: none;
-    padding: 12px 24px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: var(--azul-profundo);
-  }
-  
-  .alt-bg {
-    background-color: var(--azul-medio);
-    color: #000;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  ul li {
-    margin: 10px 0;
-    font-size: 1.1rem;
-  }
-  
-  blockquote {
-    font-style: italic;
-    margin: 20px 0;
-  }
-  
-  cite {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-    gap: 15px;
-  }
-  
-  form label {
-    font-weight: bold;
-  }
-  
-  form input {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-  }
-  
-  form button {
-    background-color: var(--azul-claro);
-    color: var(--azul-profundo);
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #mensagem-enviada {
-    margin-top: 20px;
-    font-weight: bold;
-  }
-  
-
-
-
-
+/* Grid Layout - Hero */
 .parent {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
-}
-    
-.div1 {
-    grid-column: span 3 / span 3;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: 15px; /* Aumentado para respirar */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.div3 {
-    grid-column: span 3 / span 3;
-    grid-row: span 3 / span 3;
-    grid-column-start: 1;
-    grid-row-start: 2;
+.div1 { grid-column: span 3; }
+.div3 { grid-column: span 3; grid-row: span 3; grid-column-start: 1; grid-row-start: 2; }
+.div4 { grid-column: span 2; grid-row: span 5; grid-column-start: 4; grid-row-start: 1; }
+.div5 { grid-column: span 3; grid-row-start: 5; }
+
+/* Botões */
+.hero button {
+  background-color: var(--azul-claro);
+  color: var(--azul-profundo);
+  border: none;
+  padding: 14px 28px; /* Aumentado */
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: var(--sombra);
 }
 
-.div4 {
-    grid-column: span 2 / span 2;
-    grid-row: span 5 / span 5;
-    grid-column-start: 4;
-    grid-row-start: 1;
-    /* background-color: aqua; */
+.hero button:hover {
+  background-color: #04d4bc; /* Tom mais vibrante */
+  transform: translateY(-2px); /* Elevação sutil */
 }
 
-.div5 {
-    grid-column: span 3 / span 3;
-    grid-row-start: 5;
+/* Seções */
+.section {
+  padding: 80px 20px; /* Mais espaço interno */
+  background-color: var(--azul-profundo);
+  text-align: center;
 }
 
+.alt-bg {
+  background-color: var(--azul-medio);
+  color: #000;
+}
 
+/* Tipografia */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
 
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
 
+p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre ícone e texto */
+}
+
+/* Formulário */
+.form-section form {
+  max-width: 500px; /* Aumentado para conforto */
+  margin: 0 auto;
+  gap: 20px;
+}
+
+form label {
+  font-weight: 600;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input {
+  padding: 12px;
+  border: 2px solid var(--azul-claro); /* Borda mais visível */
+  border-radius: 6px;
+  width: 100%;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #00a18f; /* Destaque ao focar */
+  outline: none;
+}
+
+form button {
+  background-color: var(--azul-claro);
+  color: var(--azul-profundo);
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--sombra);
+}
+
+form button:hover {
+  background-color: #04d4bc;
+  transform: translateY(-2px);
+}
+
+#mensagem-enviada {
+  margin-top: 25px;
+  font-weight: 600;
+  color: #00a18f;
+}
+
+/* Grid Sessão 1 */
 .parent_sessao1 {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
-}
-    
-.div1_sessao1 {
-    grid-column: span 5 / span 5;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.div2_sessao1 {
-    grid-column: span 5 / span 5;
-    grid-row-start: 2;
-}
+.div1_sessao1 { grid-column: span 5; }
+.div2_sessao1 { grid-column: span 5; grid-row-start: 2; }
+.div3_sessao1 { grid-column: span 3; grid-row: span 3; grid-row-start: 3; }
+.div4_sessao1 { grid-column: span 2; grid-row: span 3; grid-column-start: 4; grid-row-start: 3; }
 
-.div3_sessao1 {
-    grid-column: span 3 / span 3;
-    grid-row: span 3 / span 3;
-    grid-row-start: 3;
-}
-
-.div4_sessao1 {
-    grid-column: span 2 / span 2;
-    grid-row: span 3 / span 3;
-    grid-column-start: 4;
-    grid-row-start: 3;
-}
-
-
-
-
-
+/* Grid Sessão 2 */
 .parent_sessao2 {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
-}
-    
-.div1_sessao2 {
-    display: flex;
-    grid-column: span 5 / span 1;
-    height: 3rem;
-    /* background-color: #cd0db0; */
-    align-items: center;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.div2_sessao2 {
-    grid-column: span 5 / span 5;
-    grid-row-start: 2;
-}
+.div1_sessao2 { grid-column: span 5; display: flex; justify-content: center; align-items: center; }
+.div2_sessao2 { grid-column: span 5; grid-row-start: 2; }
 
-.div3_sessao2 {
-    grid-column: span 5 / span 5;
-    grid-row-start: 3;
-}
-
-.div4_sessao2 {
-    grid-column: span 5 / span 5;
-    grid-row: span 2 / span 2;
-    grid-row-start: 4;
-}
-      
-
-
-
-/* Responsividade para tablets e celulares */
+/* Responsividade */
 @media (max-width: 1024px) {
-  .parent,
-  .parent_sessao1,
-  .parent_sessao2 {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+  .parent, .parent_sessao1, .parent_sessao2 {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 10px;
   }
 
-  .div1,
-  .div3,
-  .div4,
-  .div5,
-  .div1_sessao1,
-  .div2_sessao1,
-  .div3_sessao1,
-  .div4_sessao1,
-  .div1_sessao2,
-  .div2_sessao2,
-  .div3_sessao2,
-  .div4_sessao2 {
-    grid-column: span 1;
-    grid-row: auto;
+  .div1, .div3, .div4, .div5,
+  .div1_sessao1, .div2_sessao1, .div3_sessao1, .div4_sessao1,
+  .div1_sessao2, .div2_sessao2 {
+      grid-column: span 1;
+      grid-row: auto;
   }
 
   .logo_empresa_gethos {
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0;
+      flex-direction: row; /* Mantém horizontal em tablets */
+      height: auto;
+      padding: 10px 0;
   }
 
   .logo_gethos {
-    height: 5rem;
-    /* margin: 10px auto; */
-    max-width: 100%;
-    object-fit: cover;
-    /* background-color: #cd0db0; */
-    object-position: center;
-    clip-path: inset(29% 30% 30% 30%);
-    margin-left: -12rem
+      width: 60px;
   }
 
   .h1_title_gethos {
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 0.5rem 0;
-    margin-left: -12rem
+      font-size: 1.5rem;
   }
 
-  .hero {
-    padding: 40px 20px;
-    
-  }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.8rem; }
+  p, ul li { font-size: 1rem; }
 
-  .hero button {
-    width: 100%;
+  .hero button, form button {
+      padding: 12px;
+      font-size: 1rem;
   }
 
   .section {
-    padding: 40px 20px;
-    
-  }
-
-  form {
-    width: 100%;
-    padding: 0 20px;
-  }
-
-  form input {
-    width: 100%;
-  }
-
-  /* 🔹 Imagens dentro das divs principais */
-  .div4 img,
-  .div3_sessao1 img,
-  .div4_sessao1 img,
-  .div3 img,
-  .div4 img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin: 0 auto;
-    display: block;
-    box-shadow: 1px -1px 1000px 1px #04d4bc;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    
-
-  }
-
-  
-
-  /* 🔹 Títulos e parágrafos ajustados */
-  h1, h2 {
-    font-size: 1.8rem;
-    line-height: 1.3;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  ul li {
-    font-size: 1rem;
-  }
-
-  /* 🔹 Botões responsivos */
-  .hero button,
-  form button {
-    width: 100%;
-    font-size: 1rem;
-    padding: 12px;
+      padding: 50px 15px;
   }
 }
+
+@media (max-width: 768px) {
+  .logo_empresa_gethos {
+      flex-direction: column; /* Empilha em celulares */
+  }
+
+  .logo_gethos {
+      margin: 0;
+  }
+
+  .h1_title_gethos {
+      margin: 10px 0;
+  }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.section { animation: fadeIn 0.5s ease-in; }
+
+
+

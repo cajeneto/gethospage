@@ -1,20 +1,18 @@
-function scrollToSection(id) {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-  
-  document.getElementById('contatoForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-  
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const whatsapp = document.getElementById('whatsapp').value;
-  
-    console.log("Dados enviados:", { nome, email, whatsapp });
-  
-    document.getElementById('mensagem-enviada').textContent = 'Obrigado! Seus dados foram recebidos.';
-    this.reset();
+// Função para verificar se a seção está visível
+function handleScroll() {
+  const sections = document.querySelectorAll('.section');
+  const windowHeight = window.innerHeight;
+
+  sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+
+      // Se a seção está a 80% visível na tela
+      if (sectionTop < windowHeight * 0.8) {
+          section.classList.add('visible');
+      }
   });
-  
+}
+
+// Executa ao rolar e ao carregar a página
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);
